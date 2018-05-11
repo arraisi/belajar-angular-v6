@@ -8,15 +8,30 @@ import { Component } from '@angular/core';
 export class AppComponent {
   //membuat variabel
   title: string = 'app pertama abdul';
-  books: string[] = ['java', 'MySql'];
+  books: Book[] = [
+    new Book('Java', 2019),
+    new Book('PHP',2017),
+    new Book('MySql',2018),
+    new Book('Python',2138)
+  ];
 
+
+
+  //membuat variabel baru isinya dan tipedatanya dari class Book dibawah
   book: Book = new Book();
 
+  //membuat method kirimdata 
   kirimData(data){
-    console.log(data);
+    console.log(this.book);
+    if(this.book.nama && this.book.tahunTerbit){
+      this.books.push(this.book);
+    }
+    this.book = new Book();
   }
   
 }
+
 export class Book{
-  public nama: string;
+  constructor(public nama?: string, public tahunTerbit?: number){}
+  
 }
