@@ -13,4 +13,13 @@
     <span *ngIf="aBook == 'java'"> This is my favorite programming language : </span>  {{aBook}}  
   </li>
 </ul>
-
+ <!--MEMBUAT FORM , ngSubmit directive akses method kirimData, event bisa diganti dengan variabel bookForm untuk ambil formnya aja, console.log(this.book) yang diambil hanya niali yg diinput aja-->
+<form #bookForm="ngForm" (ngSubmit)="kirimData($event)">
+  <div>
+    <label for="buku"> Buku </label>
+    <input type="text" name="buku" id="buku" [ngModel]="book.name">
+  </div>
+  <div>
+    <button type="submit">Kirim</button>
+  </div>
+</form>

@@ -9,4 +9,14 @@ export class AppComponent {
   //membuat variabel
   title: string = 'app pertama abdul';
   books: string[] = ['java', 'MySql'];
+
+  book: Book = new Book();
+
+  kirimData(data){
+    console.log(data);
+  }
+  
+}
+export class Book{
+  public nama: string;
 }
