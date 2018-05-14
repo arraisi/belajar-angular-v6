@@ -1,6 +1,10 @@
 <h3>Master File</h3>
 <hr/>
 <div>
+  <div>Kode: {{currentValue.id}}</div>
+  <div>Tag: {{currentValue.tag}}</div>
+</div>
+<div>
   <app-detail (submited)="getData($event)"></app-detail>
 </div>
 <ul>

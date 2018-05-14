@@ -5,6 +5,7 @@ import { AppComponent } from './app.component';
 import { DetailComponent } from './detail/detail.component';
 import { ListComponent } from './list/list.component';
 import { MasterComponent } from './master/master.component';
+import { MasterService } from './master/master.service';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,9 @@ import { MasterComponent } from './master/master.component';
     BrowserModule,
     FormsModule
   ],
-  providers: [],
+  providers: [
+    MasterService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
