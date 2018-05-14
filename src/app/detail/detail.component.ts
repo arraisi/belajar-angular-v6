@@ -9,4 +9,7 @@ import { Master } from '../master/master.model';
 export class DetailComponent{
 @Input()
 val: Master
+
+@Input()
+index: Master
 }
