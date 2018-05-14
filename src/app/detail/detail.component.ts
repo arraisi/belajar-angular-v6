@@ -1,4 +1,5 @@
-import {Component} from '@angular/core'
+import {Component, Input} from '@angular/core'
+import { Master } from '../master/master.model';
 
 @Component({
     selector:'app-detail',
@@ -6,5 +7,6 @@ import {Component} from '@angular/core'
 })
 
 export class DetailComponent{
-
+@Input()
+val: Master
 }
