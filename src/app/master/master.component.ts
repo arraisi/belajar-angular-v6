@@ -2,13 +2,16 @@ import { Component, OnInit } from '@angular/core';
 import { Master } from './master.model';
 @Component({
   selector: 'app-master',
-  templateUrl: './master.component.html',
-  styleUrls: ['./master.component.css']
+  templateUrl: './master.component.html'
 })
 export class MasterComponent implements OnInit {
 
   data: Master[] = [];
   title: string;
+
+  getData(data){
+    this.data.push(data);
+  }
 
   constructor() { }
   ngOnInit() {
