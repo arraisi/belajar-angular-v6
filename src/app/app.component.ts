@@ -20,7 +20,7 @@ export class AppComponent {
   //membuat variabel baru isinya dan tipedatanya dari class Book dibawah
   book: Book = new Book();
 
-  //membuat method kirimdata 
+  //membuat method kirimdata, console.log sama dengan sout java
   kirimData(data){
     console.log(this.book);
     if(this.book.nama && this.book.tahunTerbit){
